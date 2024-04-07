@@ -1,0 +1,584 @@
+openapi: 3.0.0
+paths:
+  /api/categorie:
+    get:
+      tags:
+        - Categories
+      description: 'get all categorie of tapas'
+      operationId: 6bc6f04bbdea260e235cdbaeb2ab1aac
+      responses:
+        '200':
+          description: 'result all categorie of tapas'
+    put:
+      tags:
+        - Categories
+      description: 'update a categorie of tapas'
+      operationId: 9a2678e877f7778f909ff3b1d2fa0831
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: number
+                nom:
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Categories
+      description: 'create a categorie of tapas'
+      operationId: 69f3f01ff0d168cccc3bd767e75f927f
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: number
+                nom:
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: ''
+  '/api/categorie/{id}':
+    get:
+      tags:
+        - Categories
+      description: 'get a categorie of tapas'
+      operationId: 4ae8757ebc1759afadffb7b787cdddb4
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: 'get one categorie of tapas'
+    delete:
+      tags:
+        - Categories
+      description: 'delete a categorie of tapas rip'
+      operationId: eebbdc153b357ab5bd24d7549bbf69c6
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: ''
+  '/api/categorie_tapas?tapasid={id}':
+    get:
+      tags:
+        - 'Categories Tapas'
+      description: 'get a categorie of tapas'
+      operationId: 29a78c402c75faa32befb9c7c3002c99
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: ''
+  /api/categorie_tapas:
+    get:
+      tags:
+        - 'Categories Tapas'
+      description: 'get all categorie of tapas'
+      operationId: 276ffe4fe368cb60d5462c88739f01e7
+      responses:
+        '200':
+          description: ''
+    put:
+      tags:
+        - 'Categories Tapas'
+      description: 'update a categorie of tapas'
+      operationId: baed39c1bfe30bc0cd8c545e6dac36e1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                tapas_id:
+                  type: number
+                categorie_id:
+                  type: number
+              type: object
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - 'Categories Tapas'
+      description: 'create a categorie of tapas'
+      operationId: d6f52f0dee2030c8863e2cd355eeb75c
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                tapas_id:
+                  type: number
+                categorie_id:
+                  type: number
+              type: object
+      responses:
+        '200':
+          description: ''
+  '/api/categorie_tapas/{id}':
+    get:
+      tags:
+        - 'Categories Tapas'
+      description: 'get a categorie of tapas'
+      operationId: 26091f6ca28aa9aa8d88277ad39707aa
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: ''
+    delete:
+      tags:
+        - 'Categories Tapas'
+      description: 'delete a categorie of tapas rip'
+      operationId: 8cfb912ebfb35c6ab947104c11a0c546
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: ''
+  /api/commande:
+    get:
+      tags:
+        - Commandes
+      description: 'get all commandes of tapas'
+      operationId: 83545ce26ab56670e9bc529ac7dd38a7
+      responses:
+        '200':
+          description: 'result of all commandes'
+    put:
+      tags:
+        - Commandes
+      description: "update' a commande of tapas"
+      operationId: 32e774dbbf531085aea8ff850b92144a
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: number
+                tableid:
+                  type: number
+                prix_total:
+                  type: number
+                  format: float
+                confirmee:
+                  type: boolean
+                date:
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Commandes
+      description: 'create a commande of tapas'
+      operationId: 784b730aa7ee0b3824d3fd1c57a41b44
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                tableid:
+                  type: number
+                prix_total:
+                  type: number
+                  format: float
+                confirmee:
+                  type: boolean
+                date:
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: ''
+  '/api/commande/{id}':
+    get:
+      tags:
+        - Commandes
+      description: 'get a commande of tapas'
+      operationId: f54980010b1ec480a326803f7f7da738
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: 'result of a commande'
+    delete:
+      tags:
+        - Commandes
+      description: 'delete a commande of tapas rip'
+      operationId: 598cc164b305e14451593c50ec0bcb97
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: ''
+  /api/historiquecommande:
+    get:
+      tags:
+        - 'Historique Commandes'
+      description: 'give me all historique of commande'
+      operationId: 4f2a5ad11cd29e732a18726dbe31cd25
+      responses:
+        '200':
+          description: 'The data of all historique commande'
+    put:
+      tags:
+        - 'Historique Commandes'
+      description: 'update historique of commande'
+      operationId: af8f42aab33379e56102de41c2e1bd9c
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: number
+                commandeid:
+                  type: number
+                date:
+                  type: string
+                statut:
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - 'Historique Commandes'
+      description: 'create historique of commande'
+      operationId: d9b360aed67d69e9ad0f83cfbcb72efe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: number
+                commandeid:
+                  type: number
+                date:
+                  type: string
+                statut:
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: ''
+  '/api/historiquecommande/{id}':
+    get:
+      tags:
+        - 'Historique Commandes'
+      description: 'give me historique of commande by commande id'
+      operationId: 97db1728fd53ab654dcd84757f5c7cf2
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: 'The data of a historique commande'
+    delete:
+      tags:
+        - 'Historique Commandes'
+      description: 'delete historique of commande'
+      operationId: c38c9f23f6914f0dddf5cf453628c90b
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: ''
+  /api/quantite_tapas:
+    get:
+      tags:
+        - 'Quantite Tapas'
+      description: 'get all quantite of tapas'
+      operationId: 994eafe16ecd84c9f52d1f5833f253c4
+      responses:
+        '200':
+          description: 'result of all quantite tapas'
+    put:
+      tags:
+        - 'Quantite Tapas'
+      description: 'update a quantite of tapas'
+      operationId: 38d45af21a3f751d24b24feae282a349
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                tapas_id:
+                  type: number
+                commandeid:
+                  type: number
+                quantite:
+                  type: number
+              type: object
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - 'Quantite Tapas'
+      description: 'create a quantite of tapas'
+      operationId: 136e294864876b61d6833190c144756b
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                tapas_id:
+                  type: number
+                commandeid:
+                  type: number
+                quantite:
+                  type: number
+              type: object
+      responses:
+        '200':
+          description: ''
+  '/api/quantite_tapas/{id}':
+    get:
+      tags:
+        - 'Quantite Tapas'
+      description: 'get quantite tapas ByCommandeId'
+      operationId: 84db822ff83e78118d73d0b9812f33dc
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: 'result of quantite tapas'
+    delete:
+      tags:
+        - 'Quantite Tapas'
+      description: 'delete quantite tapas ByCommandeId rip'
+      operationId: dc86515f7f72b56e069744c281da2af5
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: ''
+  /api/tables:
+    get:
+      tags:
+        - Tables
+      description: 'give me all tables'
+      operationId: 7d22957a52e2ab4e09c5881e397bf0b0
+      responses:
+        '200':
+          description: 'The data of all tables'
+    put:
+      tags:
+        - Tables
+      description: 'update a tables'
+      operationId: 091700e49f8be4c0237c78217e2756d6
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: number
+              type: object
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Tables
+      description: 'create a table'
+      operationId: de8a5c24d36e5bf0d366f72bcc03526f
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: number
+              type: object
+      responses:
+        '200':
+          description: ''
+  '/api/tables/{id}':
+    get:
+      tags:
+        - Tables
+      description: 'give me a table'
+      operationId: 314b47e6e5c4f25c9f5d80601b4157ee
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: 'The data of a table'
+    delete:
+      tags:
+        - Tables
+      description: 'delete a table rip'
+      operationId: 217562e6720405d07e4cdb8739fa361b
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: ''
+  /api/tapas:
+    get:
+      tags:
+        - Tapas
+      description: 'give me all tapas'
+      operationId: 2d7ee7c6e4cc1d6975f61483dd8b6775
+      responses:
+        '200':
+          description: 'The data of all tapas'
+    put:
+      tags:
+        - Tapas
+      description: 'update a tapas tapas'
+      operationId: 2cf3e303eee144cd6240f5122445d360
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: number
+                nom:
+                  type: string
+                prix:
+                  type: number
+                  format: float
+                path_img:
+                  type: string
+                description:
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: ''
+    post:
+      tags:
+        - Tapas
+      description: 'create a tapas'
+      operationId: 6485f093a33c714c0bcf64526aaf13cb
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                id:
+                  type: number
+                nom:
+                  type: string
+                prix:
+                  type: number
+                  format: float
+                path_img:
+                  type: string
+                  format: base64
+                description:
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: ''
+  '/api/tapas/{id}':
+    get:
+      tags:
+        - Tapas
+      description: 'give me tapas'
+      operationId: 65a9f502cdf5de7bb92e6775df41784e
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: 'The data of a tapas'
+    delete:
+      tags:
+        - Tapas
+      description: 'destroy a tapas rip'
+      operationId: e45db911c621aae220e3d37bd3ae8d26
+      parameters:
+        -
+          name: id
+          in: path
+          description: "ID de l'élément à récupérer"
+          required: true
+      responses:
+        '200':
+          description: ''
