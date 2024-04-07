@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="body" alignment="TOP_CENTER" maxHeight="770.0" maxWidth="570.0" minHeight="770.0" minWidth="570.0" prefHeight="770.0" prefWidth="570.0" spacing="20.0" style="-fx-background-image: url('file:imgTapas/istockphoto-1226442280-612x612.jpg');" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.bornetapashouse.Controllers.MenuController">
+    <children>
+        <Label alignment="CENTER" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 20, 0.82, 0.0, 0.0);" text="House of the confident Tapa" textFill="WHITE">
+            <font>
+                <Font name="Javanese Text" size="27.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 20, 0.82, 0.0, 0.0);" text="Nos Tapas Fougueux :" textFill="WHITE" underline="true">
+            <font>
+                <Font name="Nirmala UI" size="19.0" />
+            </font>
+        </Label>
+      <ScrollPane fx:id="container" prefHeight="486.0" prefWidth="570.0" style="-fx-background: rgba(230,230,230,0.8); -fx-background-color: rgba(0,0,0,0);" />
+      <HBox alignment="BOTTOM_CENTER" maxWidth="450.0" prefHeight="100.0" prefWidth="180.0">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" maxWidth="450.0" minWidth="225.0" prefHeight="100.0" prefWidth="180.0">
+               <children>
+                        <Button fx:id="abortButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToPrimary" text="Annuler la commande" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" maxWidth="225.0" minWidth="225.0" prefHeight="100.0" prefWidth="180.0">
+               <children>
+                        <Button fx:id="panierButton" mnemonicParsing="false" onAction="#switchToPanier" text="Panier" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+        <VBox alignment="TOP_CENTER" disable="true" prefHeight="95.0" prefWidth="475.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+            </children>
+            <padding>
+                <Insets top="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</VBox>

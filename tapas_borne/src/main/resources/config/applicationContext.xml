@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Définissez vos beans ici -->
+    <!--
+    <bean id="tapasService" class="chemin.vers.VotreService">
+        <property name="tapasDAO" ref="tapasDAO"/>
+    </bean>
+
+    <bean id="tapasDAO" class="chemin.vers.VotreDAO">
+       --> <!-- Configurations supplémentaires pour le DAO --> <!--
+    </bean> -->
+
+</beans>

@@ -1,0 +1,14 @@
+[
+    {
+        "nom": "Tapas 1",
+        "prix": 10.0,
+        "pathImg": "chemin/vers/image1.jpg",
+        "categorieId": 1
+    },
+    {
+        "nom": "Tapas 2",
+        "prix": 12.0,
+        "pathImg": "chemin/vers/image2.jpg",
+        "categorieId": 2
+    }
+]

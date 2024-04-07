@@ -1,0 +1,36 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--Configuration de la liaison entre Spring et la base de donnée SQL-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/db_tapas_groupe3" />
+        <property name="username" value="root" />
+        <property name="password" value="" />
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    
+    <!-- Définissez vos beans ici -->
+ 
+    <bean id="tapasDAO" class="DAO.TapasDAO">
+        <!-- Configurations supplémentaires pour le DAO -->
+    </bean>
+
+    <bean id="tapasService" class="Services.TapasService">
+        <constructor-arg ref="tapasDAO"/>
+    </bean>
+    <bean id="primaryController" class="com.mycompany.bornetapashouse.PrimaryController">
+        <property name="tapasService" ref="tapasService" />
+        <!-- Ajoutez d'autres propriétés si nécessaire -->
+    </bean>
+<context:component-scan base-package="com.mycompany.bornetapashouse" />
+
+</beans>
